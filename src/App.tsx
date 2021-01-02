@@ -25,11 +25,11 @@ export class App extends React.Component<{}, AppState> {
 
   render() {
     return (
-      <div id='layout' className='pure-g'>
-        <div className='sidebar pure-u-1-4'>
+      <div className='layout'>
+        <div className='sidebar'>
           <PokeBook onSelectId={(id) => this.onPokemonId(id)} />
         </div>
-        <div className='content pure-u-3-4'>
+        <div className='content'>
           <PokeViewer id={this.state.id} pokemon={this.state.pokemon} />
           <PokeSelect
             onClickPrev={() => this.onPrevPokemon()}

@@ -1,4 +1,4 @@
-@import 'https://unpkg.com/purecss@2.0.3/build/pure-min.css';
+@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css';
 
 html {
   height: 100%;
@@ -13,22 +13,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 #root {
-  background: #f4fdff;
-}
-
-#layout {
   height: 100%;
-  padding: 0;
+  background: #f4fdff;
 }
 
 .sidebar {
   position: fixed;
+  width: 20%;
   top: 0;
   bottom: 0;
 }
@@ -39,8 +31,7 @@ code {
 }
 
 #numselect {
-  display: inline;
-  width: 80%;
+  margin: 2em;
 }
 
 .content {
@@ -48,11 +39,14 @@ code {
   margin-left: 25%;
   padding-left: 5%;
   background: #ddeefe;
-  height: auto;
+  height: 100%;
+  position: fixed;
+  width: 80%;
 }
 
 .mainframe {
   width: 60%;
+  height: 50%;
   background: bisque;
 }
 
@@ -60,30 +54,42 @@ code {
   text-align: left;
   margin-left: 2em;
   letter-spacing: 0.2em;
+  height: 20%;
 }
 
-#pokemon-visual {
-  text-align: left;
+#pokemon-body {
+  display: flex;
+  height: 70%;
+  margin-bottom: 1em;
+}
+
+.box-image {
   margin: 0 0 1em 2em;
-  display: block;
   height: 100%;
   border: solid;
   border-color: lightgray;
   object-fit: contain;
 }
 
-#switch-button {
-  margin-bottom: 1em;
-  vertical-align: bottom;
-}
-#switch-button button {
-  margin: 0.2em;
+.vertical-btn-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto 0 0 1em;
+  width: 15%;
 }
 
-.buttons {
+.vertical-btn {
+  width: 100%;
+  margin: 0.5em;
+}
+
+.horizontal-btn-group {
   margin: 2em 0;
+  width: 30%;
 }
 
-.buttons .pure-button {
-  margin: 0 0.5em 0 0;
+.horizontal-btn {
+  margin: 0 1em 0 0;
+  width: 40%;
 }

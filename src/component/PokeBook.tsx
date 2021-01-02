@@ -15,16 +15,15 @@ export class PokeBook extends React.Component<PokeBookProps, {}> {
       );
     }
     return (
-      <form className='pure-form pure-form-stacked sidebar-content'>
-        <select
-          id='numselect'
-          onChange={(i: React.ChangeEvent<HTMLSelectElement>) =>
-            this.handleChange(i)
-          }
-        >
-          {options}
-        </select>
-      </form>
+      <select
+        id='numselect'
+        className='form-select'
+        onChange={(i: React.ChangeEvent<HTMLSelectElement>) =>
+          this.handleChange(i)
+        }
+      >
+        {options}
+      </select>
     );
   }
 

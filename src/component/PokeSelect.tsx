@@ -8,15 +8,15 @@ type PokeSelectProps = {
 export class PokeSelect extends React.Component<PokeSelectProps, {}> {
   render() {
     return (
-      <div className='buttons'>
+      <div className='horizontal-btn-group'>
         <button
-          className='pure-button'
+          className='horizontal-btn btn btn-light'
           onClick={() => this.props.onClickPrev()}
         >
           Previous
         </button>
         <button
-          className='pure-button'
+          className='horizontal-btn btn btn-light'
           onClick={() => this.props.onClickNext()}
         >
           Next

@@ -34,32 +34,29 @@ export class PokeViewer extends React.Component<
   render() {
     return (
       <div className='mainframe'>
-        <header className='pure-u-1' id='pokemon-header'>
+        <header id='pokemon-header'>
           <h2 id='pokemon-name'>
             No.{this.props.pokemon.id}: {this.props.pokemon.name}
           </h2>
         </header>
-        <div>
-          <div className='pure-u-4-5'>
-            <img
-              alt={this.props.pokemon.name}
-              src={this.props.pokemon.getImageUrl(
-                this.state.front,
-                this.state.shiny
-              )}
-              className='pure-u-4-5'
-              id='pokemon-visual'
-            />
-          </div>
-          <div className='pure-u-1-5' id='switch-button'>
+        <div id='pokemon-body'>
+          <img
+            alt={this.props.pokemon.name}
+            src={this.props.pokemon.getImageUrl(
+              this.state.front,
+              this.state.shiny
+            )}
+            className='box-image'
+          />
+          <div className='vertical-btn-group'>
             <button
-              className='pure-button'
+              className='vertical-btn btn btn-light'
               onClick={() => this.switchShinyImg()}
             >
               {this.state.shiny ? 'Default' : 'Shiny'}
             </button>
             <button
-              className='pure-button'
+              className='vertical-btn btn btn-light'
               onClick={() => this.switchBackImg()}
             >
               {this.state.front ? 'Back' : 'Front'}
