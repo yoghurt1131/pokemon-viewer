@@ -15,7 +15,11 @@ body {
 
 #root {
   height: 100%;
-  background: #f4fdff;
+  background: #f0f8ff;
+}
+
+.layout {
+  height: 100%;
 }
 
 .sidebar {
@@ -38,36 +42,39 @@ body {
   padding: 2em 3em 0;
   margin-left: 25%;
   padding-left: 5%;
-  background: #ddeefe;
+  background: #eaf8fe;
+  border-left: #8bbbc4 solid 0.1em;
   height: 100%;
-  position: fixed;
   width: 80%;
 }
 
 .mainframe {
-  width: 60%;
+  width: 80%;
   height: 50%;
-  background: bisque;
+  background: #daf9fc;
+  background-image: url('./assets/sideline_bg_800x500.png');
+  background-size: cover;
+  text-align: center;
+  padding: 1.5em 3em 1.5em 3em;
 }
 
 #pokemon-header {
-  text-align: left;
-  margin-left: 2em;
   letter-spacing: 0.2em;
   height: 20%;
 }
 
 #pokemon-body {
   display: flex;
-  height: 70%;
+  justify-content: center;
+  height: 80%;
   margin-bottom: 1em;
 }
 
 .box-image {
-  margin: 0 0 1em 2em;
+  margin: 0 0 1em 0m;
   height: 100%;
   border: solid;
-  border-color: lightgray;
+  border-color: #8bbbc4;
   object-fit: contain;
 }
 
