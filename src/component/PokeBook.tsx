@@ -1,6 +1,7 @@
 import React from 'react';
 
 type PokeBookProps = {
+  id: number;
   onSelectId: (id: number) => void;
 };
 
@@ -9,7 +10,11 @@ export class PokeBook extends React.Component<PokeBookProps, {}> {
     let options: Array<JSX.Element> = [];
     for (let i = 1; i <= 893; i++) {
       options.push(
-        <option key={`select-no${i}`} value={i}>
+        <option
+          key={`select-no${i}`}
+          value={i}
+          selected={this.props.id === i ? true : false}
+        >
           {`No. ${('000' + i.toString()).slice(-3)}`}
         </option>
       );

@@ -27,7 +27,10 @@ export class App extends React.Component<{}, AppState> {
     return (
       <div className='layout'>
         <div className='sidebar'>
-          <PokeBook onSelectId={(id) => this.onPokemonId(id)} />
+          <PokeBook
+            id={this.state.id}
+            onSelectId={(id) => this.onPokemonId(id)}
+          />
         </div>
         <div className='content'>
           <PokeViewer id={this.state.id} pokemon={this.state.pokemon} />
