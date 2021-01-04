@@ -2,7 +2,7 @@ import React from 'react';
 import { PokeBook } from './component/PokeBook';
 import { PokeSelect } from './component/PokeSelect';
 import { PokeViewer } from './component/PokeViewer';
-import { Pokemon } from './domain/Pokemon';
+import { Pokemon } from './data/Pokemon';
 import { PokemonRepository } from './repository/PokemonRepository';
 
 type AppState = {
@@ -18,7 +18,7 @@ export class App extends React.Component<{}, AppState> {
     super(props);
     this.state = {
       id: 1,
-      pokemon: new Pokemon(1, '', '', '', '', ''),
+      pokemon: new Pokemon(1, ''),
     };
     this.repository = new PokemonRepository();
   }
@@ -26,12 +26,10 @@ export class App extends React.Component<{}, AppState> {
   render() {
     return (
       <div className='layout'>
-        <div className='sidebar'>
-          <PokeBook
-            id={this.state.id}
-            onSelectId={(id) => this.onPokemonId(id)}
-          />
-        </div>
+        <PokeBook
+          id={this.state.id}
+          onSelectId={(id) => this.onPokemonId(id)}
+        />
         <div className='content'>
           <PokeViewer id={this.state.id} pokemon={this.state.pokemon} />
           <PokeSelect

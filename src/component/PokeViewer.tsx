@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pokemon } from '../domain/Pokemon';
+import { Pokemon } from '../data/Pokemon';
 import { PokemonRepository } from '../repository/PokemonRepository';
 
 export type PokeViewerProps = {

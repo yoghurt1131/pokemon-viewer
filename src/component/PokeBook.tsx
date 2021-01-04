@@ -1,4 +1,5 @@
 import React from 'react';
+import { Versions } from '../data/PokemonDetail';
 
 type PokeBookProps = {
   id: number;
@@ -7,9 +8,9 @@ type PokeBookProps = {
 
 export class PokeBook extends React.Component<PokeBookProps, {}> {
   render() {
-    let options: Array<JSX.Element> = [];
+    let numOptions: Array<JSX.Element> = [];
     for (let i = 1; i <= 893; i++) {
-      options.push(
+      numOptions.push(
         <option
           key={`select-no${i}`}
           value={i}
@@ -19,16 +20,19 @@ export class PokeBook extends React.Component<PokeBookProps, {}> {
         </option>
       );
     }
+
     return (
-      <select
-        id='numselect'
-        className='form-select'
-        onChange={(i: React.ChangeEvent<HTMLSelectElement>) =>
-          this.handleChange(i)
-        }
-      >
-        {options}
-      </select>
+      <div className='sidebar'>
+        <select
+          className='form-select book-select'
+          onChange={(i: React.ChangeEvent<HTMLSelectElement>) =>
+            this.handleChange(i)
+          }
+        >
+          {numOptions}
+        </select>
+        <select className='form-select book-select'></select>
+      </div>
     );
   }
 
