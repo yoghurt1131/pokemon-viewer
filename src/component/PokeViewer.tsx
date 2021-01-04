@@ -1,10 +1,12 @@
 import React from 'react';
 import { Pokemon } from '../data/Pokemon';
+import { Generation } from '../mytypes';
 import { PokemonRepository } from '../repository/PokemonRepository';
 
 export type PokeViewerProps = {
   id: number;
   pokemon: Pokemon;
+  generation?: Generation;
 };
 
 export type PokeViewerState = {
@@ -44,7 +46,8 @@ export class PokeViewer extends React.Component<
             alt={this.props.pokemon.name}
             src={this.props.pokemon.getImageUrl(
               this.state.front,
-              this.state.shiny
+              this.state.shiny,
+              this.props.generation
             )}
             className='box-image'
           />

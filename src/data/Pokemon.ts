@@ -1,24 +1,28 @@
-import { Images, Versions } from "./PokemonDetail";
+import { Generation, VersionImage } from "../mytypes";
+import { Images } from "./PokemonDetail";
 
 const noImages: Images = {};
-const noVersions: Versions = {};
 
 export const NoImage = 'noimage';
 export class Pokemon {
     id: number;
     name: string;
     images: Images;
-    versions: Versions
+    versions: VersionImage[];
 
     constructor(id: number, name: string, 
-        images: Images = noImages, versions: Versions = noVersions) {
+        images: Images = noImages, versions: VersionImage[]) {
         this.id = id;
         this.name = name;
-        this.images = images
+        this.images = images;
         this.versions = versions;
     }
 
-    getImageUrl(front: boolean, shiny: boolean): string {
+    getImageUrl(front: boolean, shiny: boolean, generation?: Generation): string {
+        if(generation) {
+            return this.getImageUrlFromGen(front, shiny, generation);
+        }
+
         if(front && !shiny) {
             return this.images.front_default || NoImage;
         } else if(front && shiny) {
@@ -27,6 +31,23 @@ export class Pokemon {
             return this.images.back_default || NoImage;
         } else {
             return this.images.back_shiny || NoImage;
+        }
+    }
+
+    private getImageUrlFromGen(front: boolean, shiny: boolean, generation: Generation): string {
+        let version = this.versions.find((version) => version.generation === generation);
+        if(!version) {
+            return NoImage;
+        }
+
+        if(front && !shiny) {
+            return version.images.front_default || NoImage;
+        } else if(front && shiny) {
+            return version.images.front_shiny || NoImage;
+        } else if (!front && !shiny) {
+            return version.images.back_default || NoImage;
+        } else {
+            return version.images.back_shiny || NoImage;
         }
     }
 }

@@ -3,11 +3,13 @@ import { PokeBook } from './component/PokeBook';
 import { PokeSelect } from './component/PokeSelect';
 import { PokeViewer } from './component/PokeViewer';
 import { Pokemon } from './data/Pokemon';
+import { Generation } from './mytypes';
 import { PokemonRepository } from './repository/PokemonRepository';
 
 type AppState = {
   id: number;
   pokemon: Pokemon;
+  generation?: Generation;
 };
 export class App extends React.Component<{}, AppState> {
   private readonly repository: PokemonRepository;
@@ -18,7 +20,7 @@ export class App extends React.Component<{}, AppState> {
     super(props);
     this.state = {
       id: 1,
-      pokemon: new Pokemon(1, ''),
+      pokemon: new Pokemon(1, '', {}, []),
     };
     this.repository = new PokemonRepository();
   }
@@ -29,9 +31,14 @@ export class App extends React.Component<{}, AppState> {
         <PokeBook
           id={this.state.id}
           onSelectId={(id) => this.onPokemonId(id)}
+          onSelectGen={(gen) => this.onGenerationImage(gen)}
         />
         <div className='content'>
-          <PokeViewer id={this.state.id} pokemon={this.state.pokemon} />
+          <PokeViewer
+            id={this.state.id}
+            pokemon={this.state.pokemon}
+            generation={this.state.generation}
+          />
           <PokeSelect
             onClickPrev={() => this.onPrevPokemon()}
             onClickNext={() => this.onNextPokemon()}
@@ -72,5 +79,17 @@ export class App extends React.Component<{}, AppState> {
     this.setState({
       pokemon: pokemon,
     });
+  }
+
+  onGenerationImage(gen: Generation | 'default') {
+    if (gen === 'default') {
+      this.setState({
+        generation: undefined,
+      });
+    } else {
+      this.setState({
+        generation: gen,
+      });
+    }
   }
 }

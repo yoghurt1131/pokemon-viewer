@@ -49,22 +49,25 @@ interface SpritesFields {
 type Sprites = Images & SpritesFields
 
 interface Versions {
-  'generation-i'?: Generationi;
-  'generation-ii'?: Generationii;
-  'generation-iii'?: Generationiii;
-  'generation-iv'?: Generationiv;
-  'generation-v'?: Generationv;
-  'generation-vi'?: Generationvi;
-  'generation-vii'?: Generationvii;
-  'generation-viii'?: Generationviii;
+  'generation-i': Generationi;
+  'generation-ii': Generationii;
+  'generation-iii': Generationiii;
+  'generation-iv': Generationiv;
+  'generation-v': Generationv;
+  'generation-vi': Generationvi;
+  'generation-vii': Generationvii;
+  'generation-viii': Generationviii;
 }
-
+interface Icons {
+  front_default?: string;
+  front_femail?: string;
+}
 interface Generationviii {
-  icons: Images;
+  icons: Icons;
 }
 
 interface Generationvii {
-  icons: Images;
+  icons: Icons;
   'ultra-sun-ultra-moon': Images;
 }
 
