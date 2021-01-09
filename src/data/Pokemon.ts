@@ -1,9 +1,7 @@
 import { Generation, VersionImage } from "../mytypes";
 import { Images } from "./PokemonDetail";
 
-const noImages: Images = {};
-
-export const NoImage = 'noimage';
+const NoImage = require('../assets/images/noimage.png').default;
 export class Pokemon {
     id: number;
     name: string;
@@ -11,7 +9,7 @@ export class Pokemon {
     versions: VersionImage[];
 
     constructor(id: number, name: string, 
-        images: Images = noImages, versions: VersionImage[]) {
+        images: Images = { front_default: NoImage }, versions: VersionImage[]) {
         this.id = id;
         this.name = name;
         this.images = images;
