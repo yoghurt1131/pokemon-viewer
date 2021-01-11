@@ -58,6 +58,7 @@ interface Versions {
   'generation-vii': Generationvii;
   'generation-viii': Generationviii;
 }
+
 interface Icons {
   front_default?: string;
   front_femail?: string;

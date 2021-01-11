@@ -1,12 +1,20 @@
 import { Images } from "./data/PokemonDetail";
 
-const generations = ['generation-i' , 'generation-ii' ,'generation-iii' ,'generation-iv' ,
-    'generation-v' ,'generation-vi' ,'generation-vii' ,'generation-viii'] as const;
+export const Generations = {
+    GenerationI: 'generation-i' ,
+    GenerationII: 'generation-ii' ,
+    GenerationIII: 'generation-iii' ,
+    GenerationIV: 'generation-iv' ,
+    GenerationV: 'generation-v' ,
+    GenerationVI: 'generation-vi' ,
+    GenerationVII: 'generation-vii' ,
+    GenerationVIII: 'generation-viii'
+} as const;
 
-export type Generation = typeof generations[number];
+export type Generation = typeof Generations[keyof typeof Generations];
 
 export function isGeneration(x: any): x is Generation {
-    return  generations.includes(x);
+   return  Object.values(Generations).includes(x);
 }
 
 export type PackageTitle = 'red-blue' | 'yellow' | 'gold' | 'silver' | 'crystal' |
