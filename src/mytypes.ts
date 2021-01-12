@@ -16,28 +16,6 @@ export type Generation = typeof Generations[keyof typeof Generations];
 export function isGeneration(x: any): x is Generation {
    return  Object.values(Generations).includes(x);
 }
-
-export type PackageTitle = 'red-blue' | 'yellow' | 'gold' | 'silver' | 'crystal' |
-                        'ruby-sapphire' | 'firered-leafgreen' | 'emerald' | 'diamond-pearl' |
-                        'heartgold-soulsilver' | 'platinum' | 'black-white';
-
-export function isPackageTitle(x: any): x is PackageTitle {
-    return (
-        x === 'red-blue' ||
-        x === 'yellow' ||
-        x === 'gold' ||
-        x === 'silver' ||
-        x === 'crystal' ||
-        x === 'ruby-sapphire' ||
-        x === 'firered-leafgreen' ||
-        x === 'emerald' ||
-        x === 'diamond-pearl' ||
-        x === 'heartgold-soulsilver' ||
-        x === 'platinum' ||
-        x === 'black-white'
-    );
-}
-
 export class VersionImage {
     generation: Generation
     images: Images
