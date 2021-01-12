@@ -1,5 +1,3 @@
-import { Images } from "./data/PokemonDetail";
-
 export const Generations = {
     GenerationI: 'generation-i' ,
     GenerationII: 'generation-ii' ,
@@ -15,12 +13,4 @@ export type Generation = typeof Generations[keyof typeof Generations];
 
 export function isGeneration(x: any): x is Generation {
    return  Object.values(Generations).includes(x);
-}
-export class VersionImage {
-    generation: Generation
-    images: Images
-    constructor(generation: Generation, images: Images) {
-        this.generation = generation;
-        this.images = images;
-    }
 }

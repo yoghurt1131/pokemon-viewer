@@ -1,7 +1,15 @@
-import { Generation, VersionImage } from "../mytypes";
+import { Generation } from "./Generation";
 import { Images } from "./PokemonDetail";
 
 const NoImage = require('../assets/images/noimage.png').default;
+export class VersionImage {
+    generation: Generation
+    images: Images
+    constructor(generation: Generation, images: Images) {
+        this.generation = generation;
+        this.images = images;
+    }
+}
 export class Pokemon {
     id: number;
     name: string;

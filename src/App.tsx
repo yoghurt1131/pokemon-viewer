@@ -3,7 +3,7 @@ import { PokeBook } from './component/PokeBook';
 import { PokeSelect } from './component/PokeSelect';
 import { PokeViewer } from './component/PokeViewer';
 import { Pokemon } from './data/Pokemon';
-import { Generation } from './mytypes';
+import { Generation } from './data/Generation';
 import { PokemonRepository } from './repository/PokemonRepository';
 
 type AppState = {

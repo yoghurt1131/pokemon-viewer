@@ -1,5 +1,5 @@
 import React from 'react';
-import { Generation, isGeneration } from '../mytypes';
+import { Generation, Generations, isGeneration } from '../data/Generation';
 
 type PokeBookProps = {
   id: number;

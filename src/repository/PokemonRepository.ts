@@ -1,7 +1,7 @@
-import { Pokemon } from "../data/Pokemon";
+import { Pokemon, VersionImage } from "../data/Pokemon";
 import axios from 'axios';
 import { Images, PokemonDetail } from "../data/PokemonDetail";
-import { VersionImage, Generations } from "../mytypes";
+import { Generations } from "../data/Generation";
 export class PokemonRepository {
 
     async get(id: number): Promise<Pokemon> {

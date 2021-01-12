@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pokemon } from '../data/Pokemon';
-import { Generation } from '../mytypes';
+import { Generation } from '../data/Generation';
 import { PokemonRepository } from '../repository/PokemonRepository';
 
 export type PokeViewerProps = {
