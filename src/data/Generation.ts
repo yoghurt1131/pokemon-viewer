@@ -1,12 +1,14 @@
 export const Generations = {
-    GenerationI: 'generation-i' ,
-    GenerationII: 'generation-ii' ,
-    GenerationIII: 'generation-iii' ,
-    GenerationIV: 'generation-iv' ,
-    GenerationV: 'generation-v' ,
-    GenerationVI: 'generation-vi' ,
-    GenerationVII: 'generation-vii' ,
-    GenerationVIII: 'generation-viii'
+    RedBlue: 'Red-Blue' ,
+    GoldSilver: 'Gold-Silver' ,
+    RubySapphire: 'Ruby-Sapphire' ,
+    FireredLeafgreen: 'Firered-Leafgreen' ,
+    DiamondPearl: 'Diamond-Pearl' ,
+    HeartgoldSoulsilver: 'Heartgold-Soulsilver' ,
+    BlackWhite: 'Black-White' ,
+    OmegarubyAlphasapphire: 'Omegaruby-Alphasapphire',
+    XY: 'X-Y',
+    UltrasunUltraMoon: 'Ultrasun-Ultramoon'
 } as const;
 
 export type Generation = typeof Generations[keyof typeof Generations];

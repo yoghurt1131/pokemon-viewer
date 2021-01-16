@@ -24,43 +24,53 @@ export class PokeBook extends React.Component<PokeBookProps, {}> {
       </option>
     );
     genOptions.push(
-      <option key='generation-i' value='generation-i'>
-        generation-i
+      <option key='Red-Blue' value='Red-Blue'>
+        Red-Blue
       </option>
     );
     genOptions.push(
-      <option key='generation-ii' value='generation-ii'>
-        generation-ii
+      <option key='Gold-Silver' value='Gold-Silver'>
+        Gold-Silver
       </option>
     );
     genOptions.push(
-      <option key='generation-iii' value='generation-iii'>
-        generation-iii
+      <option key='Ruby-Sapphire' value='Ruby-Sapphire'>
+        Ruby-Sapphire
       </option>
     );
     genOptions.push(
-      <option key='generation-iv' value='generation-iv'>
-        generation-iv
+      <option key='Firered-Leafgreen' value='Firered-Leafgreen'>
+        Firered-Leafgreen
       </option>
     );
     genOptions.push(
-      <option key='generation-v' value='generation-v'>
-        generation-v
+      <option key='Diamond-Pearl' value='Diamond-Pearl'>
+        Diamond-Pearl
       </option>
     );
     genOptions.push(
-      <option key='generation-vi' value='generation-vi'>
-        generation-vi
+      <option key='Heartgold-Soulsilver' value='Heartgold-Soulsilver'>
+        Heartgold-Soulsilver
       </option>
     );
     genOptions.push(
-      <option key='generation-vii' value='generation-vii'>
-        generation-vii
+      <option key='Black-White' value='Black-White'>
+        Black-White
       </option>
     );
     genOptions.push(
-      <option key='generation-viii' value='generation-viii'>
-        generation-viii
+      <option key='Omegaruby-Alphasapphire' value='Omegaruby-Alphasapphire'>
+        Omegaruby-Alphasapphire
+      </option>
+    );
+    genOptions.push(
+      <option key='X-Y' value='X-Y'>
+        X-Y
+      </option>
+    );
+    genOptions.push(
+      <option key='Ultrasun-Ultramoon' value='Ultrasun-Ultramoon'>
+        Ultrasun-Ultramoon
       </option>
     );
 
