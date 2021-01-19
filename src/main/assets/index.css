@@ -52,7 +52,7 @@ body {
   width: 80%;
   height: 50%;
   background: #daf9fc;
-  background-image: url('./assets/sideline_bg_800x500.png');
+  background-image: url('./sideline_bg_800x500.png');
   background-size: 100% auto;
   text-align: center;
   padding: 1.5em 3em 1.5em 3em;
