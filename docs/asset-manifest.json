@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.c2526d38.chunk.css",
-    "main.js": "/static/js/main.10e0bcea.chunk.js",
-    "main.js.map": "/static/js/main.10e0bcea.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2aef5bdf.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2aef5bdf.js.map",
-    "static/js/2.0e7a8051.chunk.js": "/static/js/2.0e7a8051.chunk.js",
-    "static/js/2.0e7a8051.chunk.js.map": "/static/js/2.0e7a8051.chunk.js.map",
-    "static/js/3.c6452d1c.chunk.js": "/static/js/3.c6452d1c.chunk.js",
-    "static/js/3.c6452d1c.chunk.js.map": "/static/js/3.c6452d1c.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.c2526d38.chunk.css.map": "/static/css/main.c2526d38.chunk.css.map",
-    "static/js/2.0e7a8051.chunk.js.LICENSE.txt": "/static/js/2.0e7a8051.chunk.js.LICENSE.txt"
+    "main.css": "/pokemonviewer/static/css/main.c2526d38.chunk.css",
+    "main.js": "/pokemonviewer/static/js/main.10e0bcea.chunk.js",
+    "main.js.map": "/pokemonviewer/static/js/main.10e0bcea.chunk.js.map",
+    "runtime-main.js": "/pokemonviewer/static/js/runtime-main.bf87a8c2.js",
+    "runtime-main.js.map": "/pokemonviewer/static/js/runtime-main.bf87a8c2.js.map",
+    "static/js/2.0e7a8051.chunk.js": "/pokemonviewer/static/js/2.0e7a8051.chunk.js",
+    "static/js/2.0e7a8051.chunk.js.map": "/pokemonviewer/static/js/2.0e7a8051.chunk.js.map",
+    "static/js/3.c6452d1c.chunk.js": "/pokemonviewer/static/js/3.c6452d1c.chunk.js",
+    "static/js/3.c6452d1c.chunk.js.map": "/pokemonviewer/static/js/3.c6452d1c.chunk.js.map",
+    "index.html": "/pokemonviewer/index.html",
+    "static/css/main.c2526d38.chunk.css.map": "/pokemonviewer/static/css/main.c2526d38.chunk.css.map",
+    "static/js/2.0e7a8051.chunk.js.LICENSE.txt": "/pokemonviewer/static/js/2.0e7a8051.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2aef5bdf.js",
+    "static/js/runtime-main.bf87a8c2.js",
     "static/js/2.0e7a8051.chunk.js",
     "static/css/main.c2526d38.chunk.css",
     "static/js/main.10e0bcea.chunk.js"
